@@ -1,6 +1,6 @@
 # RxJS samples
 
-Examples using the RxJS library
+Examples using the RxJS library (work in progress..)
 
 ## Get the Code
 ```
