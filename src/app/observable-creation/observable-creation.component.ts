@@ -5,10 +5,10 @@ declare var $: any;
 
 @Component({
     moduleId: module.id,
-    selector: 'rxjs',
-    templateUrl: 'rxjs-test.component.html'
+    selector: 'observable-creation',
+    templateUrl: 'observable-creation.component.html'
 })
-export class RxJSComponent implements OnInit {
+export class ObservableCreationComponent implements OnInit {
 
     constructor() {
     }

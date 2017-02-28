@@ -1,4 +1,4 @@
-import { RxJSComponent } from './rxjs-test/rxjs-test.component';
+import { ObservableCreationComponent } from './observable-creation/observable-creation.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +16,7 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
   declarations: [
     AppComponent,
     routedComponents,
-    RxJSComponent
+    ObservableCreationComponent
   ],
   providers: [
   ],

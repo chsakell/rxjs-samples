@@ -6,18 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var rxjs_test_component_1 = require("./rxjs-test/rxjs-test.component");
+var observable_creation_component_1 = require("./observable-creation/observable-creation.component");
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var routes = [
     {
         path: '',
-        redirectTo: '/rxjs',
+        redirectTo: '/rxjs-create',
         pathMatch: 'full'
     },
     {
-        path: 'rxjs',
-        component: rxjs_test_component_1.RxJSComponent
+        path: 'rxjs-create',
+        component: observable_creation_component_1.ObservableCreationComponent
     }
 ];
 var AppRoutingModule = (function () {
@@ -32,5 +32,5 @@ AppRoutingModule = __decorate([
     })
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
-exports.routedComponents = [rxjs_test_component_1.RxJSComponent];
+exports.routedComponents = [observable_creation_component_1.ObservableCreationComponent];
 //# sourceMappingURL=app-routing.module.js.map
