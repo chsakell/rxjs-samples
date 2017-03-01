@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
+import { TransformFilterComponent } from "./transform-filter/transform-filter.component";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
   declarations: [
     AppComponent,
     routedComponents,
-    ObservableCreationComponent
+    ObservableCreationComponent,
+    TransformFilterComponent
   ],
   providers: [
   ],

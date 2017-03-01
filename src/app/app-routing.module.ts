@@ -1,6 +1,7 @@
 import { ObservableCreationComponent } from './observable-creation/observable-creation.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TransformFilterComponent } from "./transform-filter/transform-filter.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'rxjs-create',
     component: ObservableCreationComponent
+  },
+  {
+    path: 'transform-filter',
+    component: TransformFilterComponent
   }
 ];
 
@@ -20,4 +25,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routedComponents = [ObservableCreationComponent];
+export const routedComponents = [
+  ObservableCreationComponent,
+  TransformFilterComponent
+  ];
