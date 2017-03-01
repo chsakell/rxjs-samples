@@ -14,11 +14,28 @@ export class TransformFilterComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.pluck();
-        //this.mapTo();
+        this.bufferCount();
+        // this.buffer();
+        // this.pluck();
+        // this.mapTo();
         // this.mapToObject();
         // this.mappArray();
         // this.map();
+    }
+
+    // buffer exact # of items before emit them
+    bufferCount() {
+        Observable.range(1,15)
+            .bufferCount(5)
+            .subscribe(this.getSubscriber('buffer-count'));
+    }
+
+    // buffers items for a certain time 
+    // the following will buffer items for 3 secs and then emit them
+    buffer() {
+        Observable.interval(1000)
+            .buffer(Observable.interval(3000))
+            .subscribe(this.getSubscriber('buffer'))
     }
 
     // extract certain properties from array objects
