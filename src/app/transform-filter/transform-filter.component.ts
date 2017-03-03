@@ -14,8 +14,11 @@ export class TransformFilterComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.distinctUntilChanged();
+        // this.distinct();
+        // this.filter();
         // this.takeUntil();
-        this.skipUntil();
+        // this.skipUntil();
         // this.takeWhile();
         // this.skipWhile();
         // this.skip();
@@ -30,8 +33,37 @@ export class TransformFilterComponent implements OnInit {
         // this.pluck();
         // this.mapTo();
         // this.mapToObject();
-        // this.mappArray();
+        // this.mapArray();
         // this.map();
+    }
+
+    // Emit a value if previous is different (not concurrent)
+    // result: 1,2,3,2,1,35,3
+    distinctUntilChanged() {
+        let source$ = Observable.of(1,1,1,2,3,2,1,35,3);
+
+        source$
+            .distinctUntilChanged()
+            .subscribe(this.getSubscriber('distinct-until-changed'));
+    }
+
+    // Emit only once each value
+    distinct() {
+        let source$ = Observable.of(1,2,3,4,5,6,2,3,4,5,3);
+
+        source$
+            .distinct()
+            .subscribe(this.getSubscriber('distinct'));
+    }
+
+    // Filter emitted items based on predicate
+    filter() {
+        const source$ = Observable.range(1,10);
+
+        source$.filter(function(v, i) {
+            return v > 5;
+        }).subscribe(this.getSubscriber('filter'));
+
     }
 
     // skip items for a certain duration. then start emitting
@@ -231,7 +263,7 @@ export class TransformFilterComponent implements OnInit {
             }).subscribe(this.getSubscriber('map-to-object'));
     }
 
-    mappArray() {
+    mapArray() {
         let names = ['Chris', 'George', 'John'];
         Observable.from(names)
             .map(v => v.toUpperCase())
