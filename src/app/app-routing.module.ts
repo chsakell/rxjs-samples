@@ -1,3 +1,4 @@
+import { ObservableCombineComponent } from './combine/observable-combine.component';
 import { ObservableCreationComponent } from './observable-creation/observable-creation.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'transform-filter',
     component: TransformFilterComponent
+  },
+  {
+    path: 'rxjs-combine',
+    component: ObservableCombineComponent
   }
 ];
 
@@ -27,5 +32,6 @@ export class AppRoutingModule { }
 
 export const routedComponents = [
   ObservableCreationComponent,
-  TransformFilterComponent
+  TransformFilterComponent,
+  ObservableCombineComponent
   ];
